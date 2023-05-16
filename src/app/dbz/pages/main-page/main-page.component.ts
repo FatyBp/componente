@@ -6,12 +6,14 @@ import { Personaje } from '../../interfaces/persona.interface';
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
+
 export class MainPageComponent {
   public personajes:Personaje [] =[
-    {nombre : "Goku", poder : 20000},
+    {nombre : "Goku", poder : 20000}
   ];
   public obtenerNuevoPersonaje(personaje:Personaje) : void {
-    this.personajes = [{...personaje}];
-    console.log(personaje);
+    this.personajes.push({...personaje});
+    console.log({personaje});
+    console.log(this.personajes);
   }
 }
