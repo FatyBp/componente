@@ -1,0 +1,15 @@
+<h2>Listado de Personajes</h2>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>poder</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of personaList">
+                <td>{{item.nombre}}</td>
+                <td>{{item.poder}}</td>
+            </tr>
+        </tbody>
+    </table>
